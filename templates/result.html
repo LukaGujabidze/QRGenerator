@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr makerS</title>
+</head>
+<body>
+    <style>
+        body
+{
+    background-color: #faebd7;
+}
+
+*
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+.text
+{
+    text-align: center;
+    text-decoration: dashed;
+    text-shadow: 2px 1px #0000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+.label
+{
+    text-decoration: dashed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.qrcode
+{
+    display: block;
+    width: 130px;
+    height: 130px;
+    border: steelblue;
+    box-shadow: 3cm;
+
+}
+
+    </style>
+    <h1 class="text">Qr maker</h1>
+    <hr>
+    <p style="text-decoration: red;">Your QR Code:</p>
+    <hr>
+    <!--  img src="{{ url_for('static',filename='output/{}'.format(file_name) ) }}" alt = 'whoops....... Code does not work. I apologize for this problem! we will fix it as soon as we can!' -->
+    <a href="#" class="qrcode">
+    <!--<img src="{{url_for('static', filename='qr/smile.png')}}">-->
+        <img src="{{url_for('static', filename='qr/{}'.format(file_name))}}">
+    </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <a href="home.html"><span style="color: red;">Go on main page?</span></a>
+        
+</body>
+</html>
